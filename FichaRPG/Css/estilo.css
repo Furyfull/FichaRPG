@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
+
+body {
+    background: hsl(36, 36%, 86%);
+}
+
+nav {
+    display: flex;
+    margin-top: 1%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid black; */
+}
+
+nav img {
+    vertical-align: middle;
+    width: 20px;
+    margin-right: 15px;
+
+}
+
+nav a {
+    margin-left: 40px;
+    padding: 5px 35px;
+    background: hwb(300 3% 63% / 0.788);
+    border-radius: 15px;
+    text-decoration: none;
+    color: hsl(64, 100%, 50%);
+}
+
+header {
+    display: flex;
+    border: 2px solid red;  
+    justify-content: center;
+    align-items: center;
+    margin-left: 15%;
+    margin-right: 20%;
+}
+
+header h1 {
+    flex: 30%;
+    color: rgb(159, 159, 235);
+    font-size: 3rem;
+    font-family: 'Sawarabi Mincho', serif;
+    text-align: center;
+    /* border: 2px dashed black; */
+}
+
+header h2 {
+    text-align: center;
+    flex: 20%;
+    /* border: 2px dashed black; */
+}
+
+.container {
+    position: relative;
+    flex: 5%;
+    width: 80px;
+    height: 80px;
+}
+
+.container p {
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    right: 40%;
+    color: black;
+}
+
+section {
+
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 10%;
+    border: 2px solid red; 
+}
+section h3 {
+    border: 2px dashed black;
+    text-align: center;
+}
+
+.left-column,
+.center-column,
+.right-column {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    padding: 10px;
+    margin: 5px;
+    width: 25%;
+}
+.right-column{
+    width: 50%;
+}
+
+.block{
+    flex-grow: 1;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+}
+
+
+.EsqCol {
+    display: inline-block;
+    text-align: center;
+    width: 20%;
+    border: 2px solid red;
+}
+table {
+    border-collapse: collapse;
+    border: 2px dashed blue;
+    width: 100%;
+  }
+
+  td, th {
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
