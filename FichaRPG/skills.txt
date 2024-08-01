@@ -1,0 +1,23 @@
+Acrobatics, 0, dex, 1
+Appraise, 0, int, 1
+Bluff, 0, cha, 1
+Climb, 0, str, 1
+Concentration, 0, int, 1
+Diplomacy, 0, cha, 1
+Disable Device, 0, dex, 1
+Disguise, 0, cha, 1
+Escape Artist, 0, dex, 1
+Fly, 0, dex, 1
+Handle Animal, 0, cha, 1
+Heal, 0, wis, 1
+Intimidate, 0, cha, 1
+Linguistics, 0, int, 1
+Perception, 0, wis, 1
+Ride, 0, dex, 1
+Sense Motive, 0, wis, 1
+Sleight of Hand, 0, dex, 1
+Spellcraft, 0, int, 1
+Stealth, 0, dex, 1
+Survival, 0, wis, 1
+Swim, 0, str, 1
+Use Magic Device, 0, cha, 1
