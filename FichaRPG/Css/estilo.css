@@ -119,10 +119,10 @@ table {
   }
 
   td, th {
-    text-align: left;
-    padding: 8px;
+    text-align: center;
+    padding: 5px;
   }
 
   tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: #e7cfcf;
   }

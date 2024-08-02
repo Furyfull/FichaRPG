@@ -1,7 +1,6 @@
-str, 11
-dex, 12
-con, 13
-int, 14
-wis, 15
-
-cha, 16
+str, 11, 0
+dex, 12, 0
+con, 13, 0
+int, 14, 0
+wis, 15, 0
+cha, 16, 0

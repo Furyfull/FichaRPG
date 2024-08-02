@@ -61,3 +61,38 @@ async function abrirAbScore(quq) {
         return bib[quq]
 }
 
+fetch('AbilScore.txt')
+    .then(response => response.text())
+    .then(data => {
+        const products = data.split('\n');
+        const tableBody = document.querySelector('#Ability-table');
+
+        products.forEach(product => {
+            if (product.trim() === '') return; // Ignorar linhas vazias
+            const [name, abScore, itemBonus] = product.split(',').map(item => item.trim());
+            const row = document.createElement('tr');
+
+            //adicona Nome
+            const nomeCell = document.createElement('td');
+            nomeCell.textContent= name.toUpperCase() ;
+            row.appendChild(nomeCell);
+            
+            //adicona Ability Score
+            const asCell = document.createElement('td');
+            asCell.textContent= abScore;
+            row.appendChild(asCell);
+
+            //Adiciona item bonus
+            const itemCell = document.createElement('td');
+            itemCell.textContent= itemBonus;
+            row.appendChild(itemCell);
+
+            //Adiciona item bonus
+            const modCell = document.createElement('td');
+            modCell.textContent= Math.round((abScore-10)/2);
+            row.appendChild(modCell);
+
+            tableBody.appendChild(row);
+
+        });
+    });
