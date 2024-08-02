@@ -10,31 +10,34 @@ fetch('skills.txt')
             const [name, skill, score, bonusClass] = product.split(',').map(item => item.trim());
             const row = document.createElement('tr');
 
-            // Adiciona a célula do nome
+            // Adiciona o nome
             const nameCell = document.createElement('td');
             nameCell.textContent = name;
             row.appendChild(nameCell);
 
-            // Adiciona a célula da skill bonus, se não for zero
+            // Adiciona o skill bonus
             const skillCell = document.createElement('td');
-            if (skill !== '0') {
-                skillCell.textContent = `${skill}`;
-            }
+            skillCell.textContent = `${skill}`;
             row.appendChild(skillCell);
 
-            // Adiciona a célula do score, se não for zero
+            // Adiciona o score
             const scoreCell = document.createElement('td');
-            if (score !== '0%' && score !== '0') {
-                scoreCell.textContent = score;
-            }
+            abrirAbScore(score).then(resp => {
+                scoreCell.textContent = resp[1] + " "+score
+            });
             row.appendChild(scoreCell);
 
-            const finalPrice = parseFloat(skill) + parseFloat(score) + 3 ? bonusClass != 0 : skill + score;
+            // Calcula o total
             const finalPriceCell = document.createElement('td');
-            if (finalPrice !== parseFloat(skill) && finalPrice !== 0) {
-                finalPriceCell.textContent = `${finalPrice}`;
+            if(bonusClass != 0){
+                abrirAbScore(score).then(resp => {
+                    finalPriceCell.textContent = resp[1] + parseFloat(skill)+ 3
+                });
+            }else{
+                abrirAbScore(score).then(resp => {
+                    finalPriceCell.textContent = resp[1] + parseFloat(skill)
+                });
             }
-
             row.appendChild(finalPriceCell);
 
 
@@ -43,4 +46,18 @@ fetch('skills.txt')
         });
     });
 
+// Ctrl + Shift + L
+
+async function abrirAbScore(quq) {
+        const response = await fetch('AbilScore.txt');
+        const data = await response.text();
+        const bib = {};
+
+        for (key of data.split('\n')) {
+            var tot = key.match(/\w+/),
+                mod = +key.match(/\d+/);
+            bib[tot] = [mod, Math.round((mod-10)/2)];
+        }
+        return bib[quq]
+}
 

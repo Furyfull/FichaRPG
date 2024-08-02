@@ -3,4 +3,5 @@ dex, 12
 con, 13
 int, 14
 wis, 15
+
 cha, 16

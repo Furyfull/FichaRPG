@@ -1,4 +1,4 @@
-Acrobatics, 0, dex, 1
+Acrobatics, 0, dex, 0
 Appraise, 0, int, 1
 Bluff, 0, cha, 1
 Climb, 0, str, 1
