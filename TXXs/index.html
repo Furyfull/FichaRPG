@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="todo-container">
+        <h1>Minha Lista de Tarefas</h1>
+        <div id="device-name-container">
+            <label for="device-name">Nome do Dispositivo:</label>
+            <input type="text" id="device-name" placeholder="Insira o nome do dispositivo">
+            <button id="save-device-name-btn">Salvar Nome</button>
+        </div>
+        <input type="text" id="task-input" placeholder="Nova tarefa...">
+        <button id="add-task-btn">Adicionar Tarefa</button>
+        <ul id="task-list"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
